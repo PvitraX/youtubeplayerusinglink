@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>YouTube Player</h1>
+            <p>Play any YouTube video by pasting its URL</p>
+        </header>
+        
+        <div class="player-section">
+            <div class="input-group">
+                <input type="text" id="urlInput" placeholder="Paste YouTube URL here..." class="url-input">
+                <button id="playButton" class="play-button">Play Video</button>
+            </div>
+            
+            <div id="errorMessage" class="error-message hidden"></div>
+            <div id="loadingIndicator" class="loading-indicator hidden">
+                <div class="loading-spinner"></div>
+                <span>Loading video...</span>
+            </div>
+            
+            <div id="videoPlayer" class="video-player hidden">
+                <iframe id="youtubeIframe" width="100%" height="400" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </div>
+        </div>
+        
+        <div class="recent-videos">
+            <h3>Recent Videos</h3>
+            <div id="recentVideosList" class="recent-videos-list">
+                <p class="no-videos">No recent videos</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
